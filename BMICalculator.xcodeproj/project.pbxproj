@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A7ADD45599123E6DD11BC0 /* Pods_BMICalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDE954D613037784BD5D05B /* Pods_BMICalculator.framework */; };
 		8AD10693221329F70030DCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD10692221329F70030DCE1 /* AppDelegate.swift */; };
 		8AD10695221329F70030DCE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD10694221329F70030DCE1 /* ViewController.swift */; };
 		8AD10698221329F70030DCE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD10696221329F70030DCE1 /* Main.storyboard */; };
 		8AD1069A221329F90030DCE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD10699221329F90030DCE1 /* Assets.xcassets */; };
 		8AD1069D221329F90030DCE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1069B221329F90030DCE1 /* LaunchScreen.storyboard */; };
+		8AD209E82216029E0025A6B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD209E72216029E0025A6B4 /* TableViewController.swift */; };
+		8AD209EA221603DF0025A6B4 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD209E9221603DF0025A6B4 /* LineChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		553F06E179D69231D26F3064 /* Pods-BMICalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMICalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMICalculator/Pods-BMICalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		8AD1068F221329F70030DCE1 /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD10692221329F70030DCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD10694221329F70030DCE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		8AD10699221329F90030DCE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD1069C221329F90030DCE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AD1069E221329F90030DCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD209E72216029E0025A6B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8AD209E9221603DF0025A6B4 /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		AACDC5FB9FEF6C00F0850B35 /* Pods-BMICalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMICalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMICalculator/Pods-BMICalculator.release.xcconfig"; sourceTree = "<group>"; };
+		AFDE954D613037784BD5D05B /* Pods_BMICalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMICalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A7ADD45599123E6DD11BC0 /* Pods_BMICalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21C0A4033935DA34FD6753B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				553F06E179D69231D26F3064 /* Pods-BMICalculator.debug.xcconfig */,
+				AACDC5FB9FEF6C00F0850B35 /* Pods-BMICalculator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8AD10686221329F70030DCE1 = {
 			isa = PBXGroup;
 			children = (
 				8AD10691221329F70030DCE1 /* BMICalculator */,
 				8AD10690221329F70030DCE1 /* Products */,
+				21C0A4033935DA34FD6753B4 /* Pods */,
+				F46C895493B2623BB07CE314 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +76,22 @@
 			children = (
 				8AD10692221329F70030DCE1 /* AppDelegate.swift */,
 				8AD10694221329F70030DCE1 /* ViewController.swift */,
+				8AD209E72216029E0025A6B4 /* TableViewController.swift */,
+				8AD209E9221603DF0025A6B4 /* LineChartViewController.swift */,
 				8AD10696221329F70030DCE1 /* Main.storyboard */,
 				8AD10699221329F90030DCE1 /* Assets.xcassets */,
 				8AD1069B221329F90030DCE1 /* LaunchScreen.storyboard */,
 				8AD1069E221329F90030DCE1 /* Info.plist */,
 			);
 			path = BMICalculator;
+			sourceTree = "<group>";
+		};
+		F46C895493B2623BB07CE314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFDE954D613037784BD5D05B /* Pods_BMICalculator.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AD106A1221329F90030DCE1 /* Build configuration list for PBXNativeTarget "BMICalculator" */;
 			buildPhases = (
+				56A586C21887BE9C0C748C65 /* [CP] Check Pods Manifest.lock */,
 				8AD1068B221329F70030DCE1 /* Sources */,
 				8AD1068C221329F70030DCE1 /* Frameworks */,
 				8AD1068D221329F70030DCE1 /* Resources */,
+				565D104C7E179FA854D50669 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +162,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		565D104C7E179FA854D50669 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BMICalculator/Pods-BMICalculator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMICalculator/Pods-BMICalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56A586C21887BE9C0C748C65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BMICalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8AD1068B221329F70030DCE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8AD10695221329F70030DCE1 /* ViewController.swift in Sources */,
+				8AD209EA221603DF0025A6B4 /* LineChartViewController.swift in Sources */,
+				8AD209E82216029E0025A6B4 /* TableViewController.swift in Sources */,
 				8AD10693221329F70030DCE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +365,7 @@
 		};
 		8AD106A2221329F90030DCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553F06E179D69231D26F3064 /* Pods-BMICalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +384,7 @@
 		};
 		8AD106A3221329F90030DCE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACDC5FB9FEF6C00F0850B35 /* Pods-BMICalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
