@@ -32,8 +32,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bmiResultLabel.numberOfLines = 1
         bmiResultLabel.adjustsFontSizeToFitWidth = true
-        bmiResultLabel.adjustsFontSizeToFitWidth = true
+        
+        heightUnitLabel.numberOfLines = 1
+        heightUnitLabel.adjustsFontSizeToFitWidth = true
+        
+        weightUnitLabel.numberOfLines = 1
+        weightUnitLabel.adjustsFontSizeToFitWidth = true
         
         
     }
@@ -73,7 +79,7 @@ class ViewController: UIViewController {
             
             let alert = UIAlertController(title: "Error", message: "Please enter a number", preferredStyle: .alert)
             let action = UIAlertAction(title: "Dismiss", style: .default) { (action) in
-                print("the user entered not a number...")
+//                print("the user entered not a number...")
             }
             
             alert.addAction(action)
@@ -127,11 +133,11 @@ class ViewController: UIViewController {
         
         if mySwitch.isOn {
 //            print("KG result")
-            bmiKgCalculation()
+            bmiLbCalculator()
             
         } else {
 //            print("LB result")
-            bmiLbCalculator()
+            bmiKgCalculation()
         }
         
     }
@@ -141,13 +147,13 @@ class ViewController: UIViewController {
         
         if mySwitch.isOn{
             
-            heightUnitLabel.text = "cm"
-            weightUnitLabel.text = "kg"
+            heightUnitLabel.text = "ft"
+            weightUnitLabel.text = "lb"
             
         } else {
             
-            heightUnitLabel.text = "ft"
-            weightUnitLabel.text = "lb"
+            heightUnitLabel.text = "cm"
+            weightUnitLabel.text = "kg"
             
         }
         
