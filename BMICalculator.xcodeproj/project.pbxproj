@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05A7ADD45599123E6DD11BC0 /* Pods_BMICalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDE954D613037784BD5D05B /* Pods_BMICalculator.framework */; };
+		8A0F1605221D1F9D00805C38 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F1604221D1F9D00805C38 /* SharedData.swift */; };
 		8AD10693221329F70030DCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD10692221329F70030DCE1 /* AppDelegate.swift */; };
 		8AD10695221329F70030DCE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD10694221329F70030DCE1 /* ViewController.swift */; };
 		8AD10698221329F70030DCE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD10696221329F70030DCE1 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		553F06E179D69231D26F3064 /* Pods-BMICalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMICalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMICalculator/Pods-BMICalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0F1604221D1F9D00805C38 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		8AD1068F221329F70030DCE1 /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD10692221329F70030DCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD10694221329F70030DCE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8A31F8202217817500E672E8 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		8A31F8212217818300E672E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AD10692221329F70030DCE1 /* AppDelegate.swift */,
+				8AD10694221329F70030DCE1 /* ViewController.swift */,
+				8AD209E72216029E0025A6B4 /* TableViewController.swift */,
+				8AD209E9221603DF0025A6B4 /* LineChartViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8A31F8222217819100E672E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AD10696221329F70030DCE1 /* Main.storyboard */,
+				8AD10699221329F90030DCE1 /* Assets.xcassets */,
+				8AD1069B221329F90030DCE1 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A31F8232217819700E672E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F1604221D1F9D00805C38 /* SharedData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8AD10686221329F70030DCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -74,13 +112,10 @@
 		8AD10691221329F70030DCE1 /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
-				8AD10692221329F70030DCE1 /* AppDelegate.swift */,
-				8AD10694221329F70030DCE1 /* ViewController.swift */,
-				8AD209E72216029E0025A6B4 /* TableViewController.swift */,
-				8AD209E9221603DF0025A6B4 /* LineChartViewController.swift */,
-				8AD10696221329F70030DCE1 /* Main.storyboard */,
-				8AD10699221329F90030DCE1 /* Assets.xcassets */,
-				8AD1069B221329F90030DCE1 /* LaunchScreen.storyboard */,
+				8A31F8232217819700E672E8 /* Model */,
+				8A31F8222217819100E672E8 /* Views */,
+				8A31F8212217818300E672E8 /* Controllers */,
+				8A31F8202217817500E672E8 /* Supporting files */,
 				8AD1069E221329F90030DCE1 /* Info.plist */,
 			);
 			path = BMICalculator;
@@ -219,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD10695221329F70030DCE1 /* ViewController.swift in Sources */,
+				8A0F1605221D1F9D00805C38 /* SharedData.swift in Sources */,
 				8AD209EA221603DF0025A6B4 /* LineChartViewController.swift in Sources */,
 				8AD209E82216029E0025A6B4 /* TableViewController.swift in Sources */,
 				8AD10693221329F70030DCE1 /* AppDelegate.swift in Sources */,

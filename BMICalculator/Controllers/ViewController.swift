@@ -7,10 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
+
+protocol newDataDelegate {
+    func newUserBMI(newBMI: String)
+}
 
 class ViewController: UIViewController {
+    
+//    var delegate: newDataDelegate?
 
+    let realm = try! Realm()
+    
+    
+    
     var bmi: Double = 0.0
+    
+   
     
     @IBOutlet weak var heightUnitLabel: UILabel!
     @IBOutlet weak var weightUnitLabel: UILabel!
@@ -62,7 +75,19 @@ class ViewController: UIViewController {
             
             bmi = 703 * (weightInDouble / (12 * (heightInDouble)) / (12 * (heightInDouble)))
             
-            BMILabel.text = String(format: "%.2f",bmi)
+            let stringBmi = String(format: "%.2f",bmi)
+            BMILabel.text = stringBmi
+            
+            
+            
+            let newBmi = SharedData()
+            newBmi.usersBMI = stringBmi
+            saveData(data: newBmi)
+            
+            
+            
+//            let usersNewBMI = String(bmi)
+//            delegate?.newUserBMI(newBMI: usersNewBMI)
             
             //bmi label changes
             if bmi < 18.5 {
@@ -79,7 +104,7 @@ class ViewController: UIViewController {
             
             let alert = UIAlertController(title: "Error", message: "Please enter a number", preferredStyle: .alert)
             let action = UIAlertAction(title: "Dismiss", style: .default) { (action) in
-//                print("the user entered not a number...")
+                print("the user entered not a number...")
             }
             
             alert.addAction(action)
@@ -100,6 +125,10 @@ class ViewController: UIViewController {
             bmi = weightInDouble / ((heightInDouble/100) * (heightInDouble/100))
             
             BMILabel.text = String(format: "%.2f",bmi)
+            
+            
+//            let usersNewBMI = String(bmi)
+//            delegate?.newUserBMI(newBMI: usersNewBMI)
             
             //bmi label changes
             if bmi < 18.5 {
@@ -129,7 +158,17 @@ class ViewController: UIViewController {
     
     @IBAction func calcButton(_ sender: UIButton) {
         
+        print("Calc button Pressed!")
+        
         view.endEditing(true)
+        
+//        if let newData = selectedData {
+//
+//            let newDetails = Details()
+//            newData.details.append(newDetails)
+//            saveData(data: newData)
+//
+//        }
         
         if mySwitch.isOn {
 //            print("KG result")
@@ -142,16 +181,28 @@ class ViewController: UIViewController {
         
     }
     
+    func saveData(data: SharedData){
+        do {
+            try realm.write {
+                realm.add(data)
+                print(data)
+            }}catch{
+                print("Error...\(error)")
+        }
+    }
+    
+    
+    
     
     @IBAction func switchPressed(_ sender: UISwitch) {
         
         if mySwitch.isOn{
-            
+            print("Switch is on")
             heightUnitLabel.text = "ft"
             weightUnitLabel.text = "lb"
             
         } else {
-            
+            print("Switch is off")
             heightUnitLabel.text = "cm"
             weightUnitLabel.text = "kg"
             
@@ -159,5 +210,24 @@ class ViewController: UIViewController {
         
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //let destinationVC = tabBarController?.navigationController?.visibleViewController
+//        if segue.identifier == "goToHistory" {
+//            let destinationVC = segue.destination as! UINavigationController
+//            destinationVC.delegate = self as? UINavigationControllerDelegate
+//        }
+//    }
+    
+//    func saveData(data: Data){
+//        
+//        do {
+//            try realm.write {
+//                realm.add(data.details)
+//                print("Saved the data!")
+//            }}catch{
+//                print("Error...\(error)")
+//        }
+//        
+//    }
     
 }
